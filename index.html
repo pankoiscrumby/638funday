@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teamsters Local 638 - Family Fun Day 2026</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Config for Custom Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teamsters: {
+              navy: '#0b2240',
+              navyLight: '#153560',
+              gold: '#e5a93b',
+              goldHover: '#cca22c',
+              goldLight: '#fdf6e2',
+              danger: '#ef4444'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            impact: ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0b2240;
+      color: #f8fafc;
+    }
+    .font-marker {
+      font-family: 'Permanent Marker', cursive;
+    }
+    .font-bungee {
+      font-family: 'Bungee', sans-serif;
+    }
+    /* Simple glassmorphism */
+    .glass-card {
+      background: rgba(21, 53, 96, 0.45);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    /* Pulsing dynamic glow */
+    @keyframes goldGlow {
+      0%, 100% { box-shadow: 0 0 5px rgba(229, 169, 59, 0.4), 0 0 10px rgba(229, 169, 59, 0.2); }
+      50% { box-shadow: 0 0 20px rgba(229, 169, 59, 0.8), 0 0 30px rgba(229, 169, 59, 0.4); }
+    }
+    .glow-gold {
+      animation: goldGlow 2s infinite;
+    }
+    /* Lock slide animation */
+    @keyframes shiver {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-2px); }
+      75% { transform: translateX(2px); }
+    }
+    .shiver-hover:hover {
+      animation: shiver 0.2s infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden selection:bg-teamsters-gold selection:text-teamsters-navy">
+
+  <!-- Background SVG Elements representing dynamic paths / rollercoaster vibes -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-10">
+    <svg class="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100 200 C 300 50, 400 600, 1200 400" stroke="#e5a93b" stroke-width="4" fill="none" />
+      <path d="M-50 400 C 500 200, 600 800, 1500 300" stroke="#e5a93b" stroke-width="2" fill="none" />
+      <circle cx="200" cy="150" r="100" stroke="#e5a93b" stroke-width="1" fill="none" />
+      <circle cx="900" cy="550" r="180" stroke="#e5a93b" stroke-width="1" fill="none" />
+    </svg>
+  </div>
+
+  <!-- Header Section with Teamsters branding -->
+  <header class="w-full bg-slate-950/80 border-b border-slate-800/80 sticky top-0 z-40 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <!-- Reconstructed Dynamic Teamsters Horse/Emblem Symbol -->
+        <div class="w-10 h-10 rounded-full bg-teamsters-navy border-2 border-teamsters-gold flex items-center justify-center text-teamsters-gold font-bold text-xs shadow-inner">
+          638
+        </div>
+        <div>
+          <h1 class="text-xs uppercase font-semibold text-slate-400 tracking-widest">International Brotherhood of Teamsters</h1>
+          <h2 class="text-sm font-bold text-teamsters-gold tracking-wider">LOCAL 638 • MN & ND</h2>
+        </div>
+      </div>
+      <div class="flex space-x-2">
+        <button onclick="shareApp()" class="p-2 rounded-lg bg-slate-900 border border-slate-700/50 hover:bg-slate-800 hover:text-teamsters-gold transition duration-200 text-slate-300 flex items-center space-x-1.5 text-xs font-semibold shadow-sm" title="Share App Link">
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">Share Event Companion</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Headline -->
+  <main class="max-w-4xl mx-auto px-4 py-8 relative z-10 flex flex-col items-center">
+    
+    <!-- Title Section mimicking the flyer's powerful bold aesthetic -->
+    <div class="text-center mb-8 w-full">
+      <div class="inline-block px-4 py-1.5 bg-teamsters-gold/15 border border-teamsters-gold/30 text-teamsters-gold rounded-full text-xs font-bold uppercase tracking-widest mb-4 animate-pulse">
+        ⚡ 2026 Family Get-Together ⚡
+      </div>
+      
+      <h1 class="font-bungee text-4xl sm:text-6xl md:text-7xl text-white tracking-tighter leading-none uppercase drop-shadow-md">
+        TEAMSTERS
+      </h1>
+      <h2 class="font-bungee text-5xl sm:text-7xl md:text-8xl text-teamsters-gold tracking-tight leading-none uppercase drop-shadow-lg -mt-1 sm:-mt-2">
+        LOCAL 638
+      </h2>
+      
+      <div class="flex items-center justify-center space-x-3 my-4">
+        <span class="h-0.5 w-12 bg-teamsters-gold/40"></span>
+        <span class="font-marker text-2xl sm:text-4xl text-rose-500 transform -rotate-2 tracking-wide">Family Fun Day</span>
+        <span class="h-0.5 w-12 bg-teamsters-gold/40"></span>
+      </div>
+
+      <div class="inline-flex items-center justify-center bg-slate-950/60 border border-slate-800 rounded-full px-5 py-2 mt-2 space-x-2 shadow-lg">
+        <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+        <span class="text-xs text-slate-300 font-medium">Host Park: <strong class="text-white hover:text-teamsters-gold transition">Valleyfair (Shakopee, MN)</strong></span>
+      </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE HUB (Countdown + Ticket Gate) -->
+    <section class="w-full glass-card rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden mb-8">
+      <!-- Accent Top Banner -->
+      <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teamsters-gold via-yellow-400 to-amber-500"></div>
+      
+      <!-- Inside Glow Element -->
+      <div class="absolute -right-24 -top-24 w-48 h-48 bg-teamsters-gold/10 rounded-full filter blur-3xl pointer-events-none"></div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Column 1: Countdown Clock (Takes 7 Cols on desktop) -->
+        <div class="md:col-span-7 flex flex-col justify-center">
+          <div class="flex items-center space-x-2 text-slate-400 mb-3 justify-center md:justify-start">
+            <i data-lucide="clock" class="w-4 h-4 text-teamsters-gold animate-spin-slow"></i>
+            <span class="text-xs font-bold uppercase tracking-wider">Ticket Link Countdown Status</span>
+          </div>
+          
+          <h3 id="timer-header" class="text-sm font-semibold text-center md:text-left mb-4 text-amber-200">
+            TICKETS GO LIVE TONIGHT (JULY 10) AT 7:10 PM CDT
+          </h3>
+
+          <!-- Countdown Grid -->
+          <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto md:mx-0">
+            <!-- Days -->
+            <div class="bg-slate-950/95 rounded-xl border border-slate-800 p-3 sm:p-4 text-center">
+              <span id="countdown-days" class="block font-mono text-3xl sm:text-4xl font-extrabold text-white">00</span>
+              <span class="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase tracking-wider">Days</span>
+            </div>
+            <!-- Hours -->
+            <div class="bg-slate-950/95 rounded-xl border border-slate-800 p-3 sm:p-4 text-center">
+              <span id="countdown-hours" class="block font-mono text-3xl sm:text-4xl font-extrabold text-white">00</span>
+              <span class="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase tracking-wider">Hours</span>
+            </div>
+            <!-- Minutes -->
+            <div class="bg-slate-950/95 rounded-xl border border-slate-800 p-3 sm:p-4 text-center">
+              <span id="countdown-minutes" class="block font-mono text-3xl sm:text-4xl font-extrabold text-white">00</span>
+              <span class="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase tracking-wider">Mins</span>
+            </div>
+            <!-- Seconds -->
+            <div class="bg-slate-950/95 rounded-xl border border-slate-800 p-3 sm:p-4 text-center ring-2 ring-teamsters-gold/30">
+              <span id="countdown-seconds" class="block font-mono text-3xl sm:text-4xl font-extrabold text-teamsters-gold">00</span>
+              <span class="text-[10px] sm:text-xs text-teamsters-gold font-bold uppercase tracking-wider">Secs</span>
+            </div>
+          </div>
+          
+          <!-- Precise Launch Time Details -->
+          <div class="mt-4 p-3 bg-slate-950/50 rounded-xl border border-slate-800/60 text-xs text-slate-300 text-center md:text-left space-y-1">
+            <p><strong>System Status Target:</strong> July 10, 2026 @ 7:10 PM CDT</p>
+            <p class="text-slate-400">Current device time zone is supported automatically.</p>
+          </div>
+        </div>
+
+        <!-- Column 2: Ticket Link and Safe Gate (Takes 5 Cols on desktop) -->
+        <div class="md:col-span-5 bg-slate-950/80 rounded-xl p-5 border border-slate-800 shadow-inner flex flex-col justify-between h-full">
+          <div>
+            <div class="flex items-center justify-between mb-3 pb-3 border-b border-slate-800">
+              <span class="text-xs uppercase font-bold text-slate-400">Link Access Gate</span>
+              <span id="gate-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center space-x-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+                <span>LOCKED</span>
+              </span>
+            </div>
+
+            <!-- Pre-purchase Checklist (Mandatory Safeguard from Flyer Warning!) -->
+            <div class="space-y-3 mb-5">
+              <p class="text-[11px] text-slate-400 leading-snug">
+                The park explicitly enforces membership rules. Please verify your status to unlock navigation once active:
+              </p>
+              
+              <label class="flex items-start space-x-2.5 cursor-pointer group text-left">
+                <input type="checkbox" id="chk-member" onchange="checkGateConditions()" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-teamsters-gold focus:ring-teamsters-gold focus:ring-offset-slate-950 h-4.5 w-4.5 transition cursor-pointer">
+                <span class="text-xs text-slate-300 group-hover:text-white transition leading-tight">
+                  I am an active <strong>Local 638 Member</strong> or <strong>Retiree</strong>.
+                </span>
+              </label>
+
+              <label class="flex items-start space-x-2.5 cursor-pointer group text-left">
+                <input type="checkbox" id="chk-refund" onchange="checkGateConditions()" class="mt-0.5 rounded border-slate-700 bg-slate-900 text-teamsters-gold focus:ring-teamsters-gold focus:ring-offset-slate-950 h-4.5 w-4.5 transition cursor-pointer">
+                <span class="text-xs text-slate-300 group-hover:text-white transition leading-tight text-rose-300">
+                  I understand non-members <strong>will not be allowed access</strong> & <strong>will not be refunded</strong>.
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Dynamic CTA Button -->
+          <div class="space-y-2">
+            <!-- Active/Live URL Button -->
+            <a href="https://valleyfair.ticketspice.com/corporate-private-stores?t=teamsters" 
+               target="_blank" 
+               id="btn-buy-tickets" 
+               class="w-full py-3.5 px-4 bg-slate-800 text-slate-400 rounded-xl font-bold text-center flex items-center justify-center space-x-2 pointer-events-none transition-all duration-300 relative group overflow-hidden shadow-md">
+              <!-- Animated lock icon or standard ticket icon -->
+              <i id="btn-icon" data-lucide="lock" class="w-4 h-4 transition duration-300 group-hover:scale-110"></i>
+              <span id="btn-text">Link Locked Until 7:10 PM</span>
+            </a>
+            
+            <p id="gate-instruction" class="text-[10px] text-slate-500 text-center font-medium">
+              Check all verification boxes to unlock button interaction.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CRITICAL WARNING NOTICE -->
+    <div class="w-full bg-rose-950/40 border-2 border-rose-800/80 rounded-2xl p-5 mb-8 flex items-start space-x-4 shadow-lg">
+      <div class="p-3 bg-rose-900/40 rounded-xl border border-rose-700/50 text-rose-400 animate-pulse mt-1">
+        <i data-lucide="shield-alert" class="w-6 h-6"></i>
+      </div>
+      <div class="space-y-2">
+        <h4 class="text-sm font-extrabold text-rose-300 uppercase tracking-wider flex items-center space-x-2">
+          <span>MEMBERSHIP RESTRICTION STRICTLY ENFORCED</span>
+        </h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          This Valleyfair Family Fun Day store is strictly for <strong>Local 638 Members and Retirees only</strong>. If you purchase tickets and are not an authorized Local 638 Member or Retiree, you will be denied park entry at the turnstiles and you <strong>WILL NOT BE REFUNDED</strong> under any circumstances.
+        </p>
+      </div>
+    </div>
+
+    <!-- EVENT INFO CARDS GRID -->
+    <section class="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      
+      <!-- Card 1: Date & Time -->
+      <div class="glass-card rounded-xl p-5 border border-slate-800/80 flex items-start space-x-3.5 relative overflow-hidden group hover:border-teamsters-gold/30 transition duration-300">
+        <div class="p-2.5 rounded-lg bg-teamsters-navy/80 text-teamsters-gold border border-teamsters-gold/20 shadow-inner">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">When</span>
+          <p class="text-sm font-extrabold text-white">Sunday, Aug 16, 2026</p>
+          <p class="text-xs text-slate-400">All-Day Admission</p>
+          <!-- Calendar integration triggers -->
+          <div class="pt-2 flex flex-col gap-1.5">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Teamsters+Local+638+Family+Fun+Day+at+Valleyfair&dates=20260816T150000Z/20260817T010000Z&details=Join+Local+638+Members+for+the+annual+Family+Fun+Day!+Strictly+for+Local+638+members+and+retirees.&location=Valleyfair,+Shakopee,+MN" target="_blank" class="text-[11px] font-semibold text-teamsters-gold hover:underline flex items-center space-x-1">
+              <i data-lucide="plus" class="w-3 h-3"></i>
+              <span>Google Calendar</span>
+            </a>
+            <button onclick="downloadICS()" class="text-[11px] font-semibold text-slate-300 hover:text-white hover:underline flex items-center space-x-1 text-left">
+              <i data-lucide="download" class="w-3 h-3"></i>
+              <span>Download iCal (.ics)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Location -->
+      <div class="glass-card rounded-xl p-5 border border-slate-800/80 flex items-start space-x-3.5 relative overflow-hidden group hover:border-teamsters-gold/30 transition duration-300">
+        <div class="p-2.5 rounded-lg bg-teamsters-navy/80 text-teamsters-gold border border-teamsters-gold/20 shadow-inner">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Where</span>
+          <p class="text-sm font-extrabold text-white">Valleyfair</p>
+          <p class="text-xs text-slate-300">Shakopee, MN</p>
+          <a href="https://maps.google.com/?q=Valleyfair+Shakopee+MN" target="_blank" class="inline-block pt-1.5 text-[11px] font-semibold text-teamsters-gold hover:underline">
+            Get Directions →
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Admission eligibility -->
+      <div class="glass-card rounded-xl p-5 border border-slate-800/80 flex items-start space-x-3.5 relative overflow-hidden group hover:border-teamsters-gold/30 transition duration-300">
+        <div class="p-2.5 rounded-lg bg-teamsters-navy/80 text-teamsters-gold border border-teamsters-gold/20 shadow-inner">
+          <i data-lucide="ticket" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1">
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Store Access</span>
+          <p class="text-sm font-extrabold text-white">Private Portal</p>
+          <p class="text-xs text-slate-300">Local 638 Credentials</p>
+          <span class="inline-block mt-1.5 px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded text-[10px] font-bold">
+            Authorized Store Only
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ACCORDION: View Original Flyer Image (Mandatory Requirement) -->
+    <section class="w-full glass-card rounded-xl border border-slate-800/80 mb-8 overflow-hidden">
+      <button onclick="toggleFlyer()" class="w-full px-5 py-4 flex items-center justify-between hover:bg-slate-900/50 transition duration-200">
+        <div class="flex items-center space-x-3 text-left">
+          <div class="p-1.5 rounded-md bg-teamsters-gold/10 text-teamsters-gold">
+            <i data-lucide="image" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white">View Original Flyer Image</h3>
+            <p class="text-xs text-slate-400">Click to expand or minimize the uploaded flyer artwork</p>
+          </div>
+        </div>
+        <span id="flyer-arrow" class="transform transition duration-300">
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400"></i>
+        </span>
+      </button>
+      
+      <!-- Hidden accordion content -->
+      <div id="flyer-content" class="hidden border-t border-slate-800/80 bg-slate-950/80 p-5 flex flex-col items-center">
+        <!-- Render the image.png file dynamically -->
+        <div class="max-w-md w-full rounded-lg overflow-hidden border border-slate-800 shadow-2xl relative group">
+          <img src="image.png" alt="Teamsters Local 638 Family Fun Day Flyer" class="w-full h-auto" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=600'; document.getElementById('image-error-toast').classList.remove('hidden');">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
+            <span class="text-xs text-slate-300 bg-slate-900/90 px-3 py-1.5 rounded-full border border-slate-800 backdrop-blur">Original Event Poster Artwork</span>
+          </div>
+        </div>
+        <!-- Local fallback alert message if local image.png doesn't load immediately -->
+        <p id="image-error-toast" class="hidden text-[11px] text-amber-400 mt-2 text-center">
+          Note: Showing placeholder cover as image.png is loading / simulating fallback.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE QR CODE COMPANION DISPLAY -->
+    <section class="w-full glass-card rounded-2xl p-6 sm:p-8 border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-6 mb-8">
+      <div class="space-y-3 text-center sm:text-left max-w-md">
+        <h4 class="text-lg font-bold text-white flex items-center justify-center sm:justify-start space-x-2">
+          <i data-lucide="qr-code" class="w-5 h-5 text-teamsters-gold"></i>
+          <span>Scan to Share or Purchase</span>
+        </h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Need to access the page from your phone or send it directly to a fellow Teamsters Local 638 colleague? Scan the QR code or use the quick share action below.
+        </p>
+        <div class="flex flex-wrap justify-center sm:justify-start gap-2 pt-1">
+          <button onclick="shareApp()" class="px-4 py-2 bg-teamsters-navy hover:bg-teamsters-navyLight text-teamsters-gold hover:text-white border border-teamsters-gold/30 rounded-lg text-xs font-bold transition flex items-center space-x-2 shadow-sm">
+            <i data-lucide="share" class="w-3.5 h-3.5"></i>
+            <span>Share Ticket Gate Link</span>
+          </button>
+          <button onclick="copyToClipboard('https://valleyfair.ticketspice.com/corporate-private-stores?t=teamsters')" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 rounded-lg text-xs font-bold transition flex items-center space-x-2 shadow-sm">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>Copy Direct Store URL</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Interactive simulated dynamic QR Code linking to ticket spice URL -->
+      <div class="bg-white p-4 rounded-xl shadow-lg border border-slate-200 flex flex-col items-center justify-center space-y-1">
+        <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://valleyfair.ticketspice.com/corporate-private-stores?t=teamsters" alt="Valleyfair Teamsters Ticket Spice QR Code" class="w-32 h-32" onerror="this.onerror=null; this.style.display='none'; document.getElementById('qr-fallback').classList.remove('hidden');">
+        
+        <!-- Retro SVG Fallback if api.qrserver.com is blocked / slow -->
+        <div id="qr-fallback" class="hidden w-32 h-32 bg-slate-100 flex items-center justify-center border border-dashed border-slate-300 text-slate-500 text-xs text-center font-mono">
+          QR CODE TO:<br>Valleyfair TicketSpice
+        </div>
+        <span class="text-[10px] text-slate-500 font-extrabold uppercase tracking-widest pt-1">SCAN TO PURCHASE!</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CUSTOM FEEDBACK TOASTS -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-slate-950/90 border-t border-slate-900 py-8 relative z-10 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center space-x-3 text-slate-400">
+        <span>Teamsters Local 638</span>
+        <span>•</span>
+        <span>Est. 1946</span>
+        <span>•</span>
+        <span>Valleyfair Outing</span>
+      </div>
+      <p class="max-w-md mx-auto text-[11px] leading-relaxed">
+        This app is a custom informational companion to assist members of Teamsters Local 638 with prompt, safe ticket acquisitions for the August 16th, 2026 event.
+      </p>
+      <p class="text-[10px]">
+        Designed in compliance with visual materials and links provided by local delegates.
+      </p>
+    </div>
+  </footer>
+
+  <!-- CORE SCRIPTS & GATEWAY LOGIC -->
+  <script>
+    // System Target live release timestamp (July 10, 2026 at 19:10:00 CDT)
+    // Central Daylight Time (CDT) is UTC-5
+    const targetDateString = "2026-07-10T19:10:00-05:00"; 
+    const targetTime = new Date(targetDateString).getTime();
+    
+    let timerIsLive = false;
+
+    // Check system status immediately and on intervals
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetTime - now;
+
+      const daysSpan = document.getElementById('countdown-days');
+      const hoursSpan = document.getElementById('countdown-hours');
+      const minutesSpan = document.getElementById('countdown-minutes');
+      const secondsSpan = document.getElementById('countdown-seconds');
+      const timerHeader = document.getElementById('timer-header');
+
+      if (difference <= 0) {
+        // COUNTDOWN COMPLETE - LIVE!
+        daysSpan.innerText = "00";
+        hoursSpan.innerText = "00";
+        minutesSpan.innerText = "00";
+        secondsSpan.innerText = "00";
+        
+        timerIsLive = true;
+        timerHeader.innerHTML = "🎉 THE TICKET LINK IS NOW LIVE!";
+        timerHeader.classList.remove('text-amber-200');
+        timerHeader.classList.add('text-emerald-400', 'font-extrabold', 'animate-bounce');
+        
+        // Transition gate status badge
+        const badge = document.getElementById('gate-badge');
+        badge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span><span>ACTIVE</span>`;
+        badge.className = "px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center space-x-1";
+
+        checkGateConditions(); // Refresh gate button status
+      } else {
+        // Still ticking down
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        daysSpan.innerText = String(days).padStart(2, '0');
+        hoursSpan.innerText = String(hours).padStart(2, '0');
+        minutesSpan.innerText = String(minutes).padStart(2, '0');
+        secondsSpan.innerText = String(seconds).padStart(2, '0');
+        
+        timerIsLive = false;
+        checkGateConditions(); // Refresh gate button status
+      }
+    }
+
+    // Active Safeguard Checklist Conditions Checker
+    function checkGateConditions() {
+      const isMember = document.getElementById('chk-member').checked;
+      const acceptedRefundRule = document.getElementById('chk-refund').checked;
+      const buyBtn = document.getElementById('btn-buy-tickets');
+      const btnText = document.getElementById('btn-text');
+      const btnIcon = document.getElementById('btn-icon');
+      const gateInstruction = document.getElementById('gate-instruction');
+
+      const checklistCompleted = isMember && acceptedRefundRule;
+
+      if (!timerIsLive) {
+        // CASE A: Link is locked in the future (Countdown active)
+        buyBtn.className = "w-full py-3.5 px-4 bg-slate-800 text-slate-500 rounded-xl font-bold text-center flex items-center justify-center space-x-2 pointer-events-none border border-slate-700/30";
+        btnText.innerText = "Link Locked Until 7:10 PM";
+        btnIcon.setAttribute('data-lucide', 'lock');
+        gateInstruction.innerHTML = `<span class="text-amber-400 font-semibold">Ticking down...</span> Checklist must be verified before launch.`;
+      } else {
+        // CASE B: Countdown finished! Waiting for checklist confirmation
+        if (checklistCompleted) {
+          // Gate Opened! Beautiful glowing animated gold button
+          buyBtn.className = "w-full py-3.5 px-4 bg-teamsters-gold hover:bg-teamsters-goldHover text-teamsters-navy rounded-xl font-extrabold text-center flex items-center justify-center space-x-2 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-lg glow-gold font-bungee tracking-wide cursor-pointer";
+          btnText.innerText = "ACCESS TICKETS PORTAL NOW";
+          btnIcon.setAttribute('data-lucide', 'external-link');
+          buyBtn.style.pointerEvents = "auto";
+          gateInstruction.innerHTML = `<span class="text-emerald-400 font-extrabold flex items-center justify-center space-x-1">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 inline"></i> <span>SECURITY CLEARANCE CONFIRMED</span>
+          </span>`;
+        } else {
+          // Live but checkboxes not ticked
+          buyBtn.className = "w-full py-3.5 px-4 bg-slate-800 text-rose-300 rounded-xl font-bold text-center flex items-center justify-center space-x-2 border border-rose-500/30 cursor-not-allowed hover:bg-slate-800/80 shiver-hover";
+          btnText.innerText = "Check Eligibility Requirements";
+          btnIcon.setAttribute('data-lucide', 'shield-alert');
+          buyBtn.style.pointerEvents = "none";
+          gateInstruction.innerHTML = `<span class="text-rose-400 font-semibold">Please check the eligibility boxes above to unlock the link.</span>`;
+        }
+      }
+      lucide.createIcons(); // Refresh inline SVG icons rendered via lucide
+    }
+
+    // Toggle original flyer viewer (Accordion)
+    function toggleFlyer() {
+      const content = document.getElementById('flyer-content');
+      const arrow = document.getElementById('flyer-arrow');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        arrow.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        arrow.classList.remove('rotate-180');
+      }
+    }
+
+    // Copy to Clipboard Fallback (Reliable across multiple browsers & iframe environments)
+    function copyToClipboard(textToCopy) {
+      const dummyInput = document.createElement("textarea");
+      document.body.appendChild(dummyInput);
+      dummyInput.value = textToCopy;
+      dummyInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummyInput);
+      showToast("Link successfully copied to clipboard!", "success");
+    }
+
+    // Native Share or Fallback trigger
+    function shareApp() {
+      const shareData = {
+        title: 'Teamsters Local 638 Family Fun Day 2026',
+        text: 'Access the live Valleyfair Ticket Link, count-down companion, and event checklist gate!',
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData)
+          .then(() => showToast("Shared successfully!", "success"))
+          .catch((err) => {
+            // Cancelled or error
+            copyToClipboard(window.location.href);
+          });
+      } else {
+        // Fallback directly to clipboard
+        copyToClipboard(window.location.href);
+      }
+    }
+
+    // Calendar .ics file generator & downloade
+    function downloadICS() {
+      const icsMsg = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Teamsters Local 638//Family Fun Day 2026//EN",
+        "BEGIN:VEVENT",
+        "UID:teamsters638familyfunday2026@valleyfair",
+        "DTSTAMP:20260710T120000Z",
+        "DTSTART:20260816T150000Z", // Sunday, Aug 16, 2026 10 AM CDT (approx start)
+        "DTEND:20260817T020000Z",   // Sunday, Aug 16, 2026 9 PM CDT (approx end)
+        "SUMMARY:Teamsters Local 638 Family Fun Day at Valleyfair",
+        "DESCRIPTION:Join fellow Teamsters Local 638 members and retirees for the annual Family Fun Day! Remember: Non-members who purchase tickets will be denied park entry and are not eligible for a refund.",
+        "LOCATION:Valleyfair Amusement Park, Shakopee, MN",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([icsMsg], { type: "text/calendar;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "Teamsters_Local638_Valleyfair_2026.ics";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("Downloadable .ics reminder file generated!", "success");
+    }
+
+    // Toast Notification generator
+    function showToast(message, type = "success") {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      
+      toast.className = `p-4 rounded-xl border flex items-center space-x-3 text-xs font-bold shadow-xl transition-all duration-300 transform translate-y-5 opacity-0 pointer-events-auto max-w-sm ${
+        type === 'success' 
+          ? 'bg-slate-950/95 border-emerald-500/30 text-white' 
+          : 'bg-rose-950/95 border-rose-500/30 text-rose-300'
+      }`;
+
+      const icon = type === 'success' ? 'check-circle' : 'alert-circle';
+      const iconColor = type === 'success' ? 'text-emerald-400' : 'text-rose-400';
+
+      toast.innerHTML = `
+        <i data-lucide="${icon}" class="w-4 h-4 ${iconColor}"></i>
+        <span class="flex-1">${message}</span>
+      `;
+      
+      container.appendChild(toast);
+      lucide.createIcons();
+
+      // Trigger animation
+      setTimeout(() => {
+        toast.classList.remove('translate-y-5', 'opacity-0');
+      }, 50);
+
+      // Dismiss delay
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-[-10px]');
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 4000);
+    }
+
+    // Start tick cycle
+    setInterval(updateCountdown, 1000);
+    
+    // Immediate checks on boot
+    window.onload = function() {
+      updateCountdown();
+      checkGateConditions();
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
+
